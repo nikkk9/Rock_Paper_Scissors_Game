@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+.home {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(7, 39, 65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70rem;
+  height: 12rem;
+  border: 1px solid aliceblue;
+  border-radius: 1rem;
+  margin-top: 3rem;
+}
+.scoreboard .title {
+  color: aliceblue;
+  margin-left: 3rem;
+}
+.score {
+  height: 8rem;
+  width: 11rem;
+  background-color: aliceblue;
+  margin-right: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.score p {
+  font-size: 1.5rem;
+  color: rgb(0, 157, 255);
+  line-height: 2.4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+}
+.score h2 {
+  color: rgb(58, 69, 78);
+  font-size: 2.5rem;
+}
+.hands {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 32rem;
+  height: 35rem;
+  margin-top: 10rem;
+  background-image: url("../images/triangle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+.hands .rock img,
+.paper img,
+.scissors img {
+  height: 14rem;
+  width: 14rem;
+}
+.paper {
+  margin-right: 2rem;
+}
+.scissors {
+  margin-left: 2rem;
+}
+.hands .hand {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.hands .hand:hover {
+  transform: translate3d(0, -0.5rem, 0);
+}
+.contest {
+  display: none;
+  width: 90rem;
+  margin-top: 10rem;
+}
+/* size of all div will be same  */
+.contest > div {
+  flex: 1;
+}
+.contest img {
+  height: 17rem;
+  width: 17rem;
+}
+.contest h1 {
+  color: aliceblue;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+.hand_pic {
+  display: flex;
+  justify-content: center;
+}
+.referee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.decision h1 {
+  font-size: 3rem;
+}
+.play_again {
+  background-color: aliceblue;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.play_again:hover {
+  transform: translateY(-0.2rem);
+  background-color: rgb(210, 229, 245);
+}
+
+/* responsive styling  */
+
+@media (max-width: 950px) {
+  .scoreboard {
+    width: 60rem;
+  }
+  .contest {
+    width: 60rem;
+  }
+  .hand_pic img {
+    height: 14rem;
+    width: 14rem;
+  }
+}
+@media (max-width: 800px) {
+  .scoreboard {
+    width: 50rem;
+  }
+  .hands .rock img,
+  .paper img,
+  .scissors img {
+    height: 12rem;
+    width: 12rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hands .rock img,
+  .paper img,
+  .scissors img {
+    height: 12rem;
+    width: 12rem;
+  }
+  .contest {
+    width: 50rem;
+  }
+  .decision h1 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 600px) {
+  .scoreboard {
+    height: 10rem;
+  }
+  .contest {
+    width: 40rem;
+  }
+  .hand_pic img {
+    height: 11rem;
+    width: 11rem;
+  }
+  .play_again {
+    padding: 0.9rem 1rem;
+  }
+}
+@media (max-width: 550px) {
+  .scoreboard {
+    width: 40rem;
+  }
+}
+@media (max-width: 500px) {
+  .hands .rock img,
+  .paper img,
+  .scissors img {
+    height: 10rem;
+    width: 10rem;
+  }
+  .hands {
+    background-size: 74%;
+    width: 29rem;
+    height: 32rem;
+    margin-top: 12rem;
+  }
+  .scoreboard {
+    height: 8rem;
+    font-size: 75%;
+  }
+  .score {
+    height: 6rem;
+    width: 8rem;
+  }
+  .contest {
+    margin-top: 12rem;
+  }
+  .hand_pic img {
+    height: 9rem;
+    width: 9rem;
+  }
+  .user_hand h1,
+  .computer_hand h1 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 450px) {
+  .scoreboard {
+    width: 35rem;
+  }
+  .contest {
+    width: 35rem;
+  }
+  .hand_pic img {
+    height: 8rem;
+    width: 8rem;
+  }
+  .user_hand h1,
+  .computer_hand h1 {
+    font-size: 1rem;
+  }
+  .play_again {
+    padding: 0.8rem 0.8rem;
+    font-size: 1rem;
+  }
+  .decision h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 385px) {
+  .hands {
+    margin-top: 14rem;
+  }
+  .contest {
+    margin-top: 14rem;
+  }
+  .scoreboard {
+    width: 30rem;
+  }
+  .hands .rock img,
+  .paper img,
+  .scissors img {
+    height: 8rem;
+    width: 8rem;
+  }
+  .hands {
+    background-size: 65%;
+    width: 26rem;
+    height: 26rem;
+  }
+}
+
+@media (max-width: 326px) {
+  .contest {
+    width: 28rem;
+  }
+}
+
+@media (max-width: 326px) {
+  .scoreboard {
+    width: 25rem;
+  }
+}
